@@ -1,6 +1,5 @@
-variable "github_token" {default =""}
 provider "github" {
-    token = "${var.github_token}"
+    token = ""
 }
 
 resource "github_repository" "example" {
