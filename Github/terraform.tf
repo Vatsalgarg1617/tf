@@ -1,5 +1,8 @@
+variable "image_id" {
+  type = string
+}
 provider "github" {
-    token = ""
+    token = var.image_id
 }
 
 resource "github_repository" "example" {
