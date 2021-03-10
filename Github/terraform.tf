@@ -1,15 +1,10 @@
-variable "token" {
-  description = "Value of the Name tag for the EC2 instance"
-  type        = string
-  default     = ""
-}
-provider "github" {
-  token = var.token
+variable "heroku_token" {}
+provider "heroku" {
+  email   = "vatsalgarg17@gmail.com"
+  api_key = "${var.heroku_token}"
 }
 
-resource "github_repository" "example" {
-  name        = "example"
-  description = "My awesome codebase"
-
-  visibility  = "public"
+resource "heroku_app" "example" {
+  name = "caratesting"
+  region = "us"
 }
