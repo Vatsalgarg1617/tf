@@ -1,6 +1,7 @@
 variable "heroku_token" {}
+variable "email" {}
 provider "heroku" {
-  email   = "vatsalgarg17@gmail.com"
+  email   = "${var.email}"
   api_key = "${var.heroku_token}"
 }
 
