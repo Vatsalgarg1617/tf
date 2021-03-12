@@ -6,6 +6,6 @@ provider "heroku" {
 }
 
 resource "heroku_app" "example" {
-  name = "demo"
+  name = "provision-vm"
   region = "us"
 }
